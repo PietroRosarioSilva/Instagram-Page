@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ValPontoseArte</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <div id="profile">
+            <img src="./avatar.png" alt="foto de uma Artesã kawai bordando desenho">
+            <p>@valpontoseartes</p>
+        </div>
+
+        <div id="switch" onclick="toggleMode()">
+            <button></button>
+            <span></span>
+        </div>
+
+        <ul>
+            <li>
+                <a href="https://lista.mercadolivre.com.br/_CustId_37895361?item_id=MLB1093333619&category_id=MLB40189&seller_id=37895361&client=recoview-selleritems&recos_listing=true"
+                    target="_blank">Mercado Livre</a>
+            </li>
+            <li>
+                <a href="https://www.elo7.com.br/valpontosearts" target="_blank">Elo7</a>
+            </li>
+        </ul>
+
+        <div id="social-link">
+            <a onclick="showInternationalShipping()">
+                <ion-icon name="earth-outline"></ion-icon>
+            </a>
+            <a href="https://www.instagram.com/valpontosearts/" target="_blank">
+                <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+            <a onclick="showWhatsappNumber()">
+                <ion-icon name="logo-whatsapp"></ion-icon>
+            </a>
+            <a onclick="showAboutUs()">
+                <ion-icon name="cart-outline"></ion-icon>
+            </a>
+        </div>
+
+        <footer>
+            Feito com <ion-icon name="heart-outline"></ion-icon> pelo <a href="https://ebookmarketplace.my.canva.site/porque-me-contratar" target="_blank">Pietro</a>
+        </footer>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
+
+    <script>
+        function toggleMode() {
+            // Altera o modo light/dark
+            document.body.classList.toggle('light');
+
+            // Adiciona ou remove o background ao corpo
+            document.body.style.background = document.body.classList.contains('light') ?
+                'var(--bg-url) no-repeat top center/cover' :
+                'your-desired-background-url';  // Substitua 'your-desired-background-url' pela URL do fundo desejado
+        }
+
+        function showInternationalShipping() {
+            alert('Aceitamos compras internacionais!');
+        }
+
+        function showWhatsappNumber() {
+            var numeroWhatsapp = "+55 11 98604-3837"; // Substitua pelo seu número de WhatsApp
+            alert('Número do WhatsApp: ' + numeroWhatsapp);
+        }
+
+        function showAboutUs() {
+            alert('Somos uma loja incrível! Compre conosco!');
+        }
+    </script>
+</body>
+</html>
